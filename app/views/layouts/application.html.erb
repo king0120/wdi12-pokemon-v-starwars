@@ -9,13 +9,21 @@
   </head>
 
   <body>
+    <%# Checks to see if a user is signed in %>
+    <%# If so, it will show the user's email by %>
+    <%# accessing the current_user hash %>
+    
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
+      <%# Provides a link to log out when a user is already logged in %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
     <% else %>
+      <%# Provides a link to sign up or sign in when a user is not logged in %>
       <%= link_to "Sign up", new_user_registration_path %> |
       <%= link_to "Login", new_user_session_path  %>
     <% end %>
+
+    <%# Renders the template specified by the controller#action %>
     <%= yield %>
   </body>
 </html>

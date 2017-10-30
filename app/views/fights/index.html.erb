@@ -8,14 +8,23 @@
 
 <div class="fight-container">
   <div class="star-wars">
+    <%# Image Tag Helper Method %>
     <%= image_tag @star_war.image %>
     <h3><%= @star_war.name %></h3>
+    <%# Button To allows you to build a form %>
+    <%# That triggers a HTTP call %>
+    <%# Here we overwrote the method to be a  %>
+    <%# Patch request %>
     <%= button_to @star_war.name, update_starwar_url(@star_war), :method => :patch %>
   </div>
 
   <div class="pokemon">
     <%= image_tag @pokemon.image %>
     <h3><%= @pokemon.name %></h3>
+    <%# Button To allows you to build a form %>
+    <%# That triggers a HTTP call %>
+    <%# Here we overwrote the method to be a  %>
+    <%# Patch request %>
     <%= button_to @pokemon.name, update_pokemon_url(@pokemon), :method => :patch %>
   </div>
 </div>
