@@ -1,24 +1,40 @@
-# README
+# Bash Commands run while setting up this app. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```bash
 
-Things you may want to cover:
+  rails new pokemon_vs_starwars -d postgresql
+  # after adding HTTParty to gemfile
+  bundle install
 
-* Ruby version
+  # Create main view controller and add a index action and html.erb
+  rails g controller Fights index
 
-* System dependencies
+  # Create models
+  rails g model Pokemon name image wins:integer
+  rails g model StarWar name image wins:integer
 
-* Configuration
+  rails db:create
+  rails db:migrate
 
-* Database creation
+  # Create migration to add api_id to each table
+  rails g migration AddApiIdToStarWars api_id:integer
+  rails g migration AddApiIdToPokemons api_id:integer
 
-* Database initialization
+  # Devise
+  # after adding devise gem to gemfile
 
-* How to run the test suite
+  bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+  # Use rails generator to start devise install
+  rails g devise:install
+  # Create a user model with devise
+  rails g devise User
+  rails db:migrate 
 
-* Deployment instructions
 
-* ...
+  # Misc
+  # Add controllers for update action and index page
+  rails g controller StarWars index update
+  rails g controller Pokemons index update
+
+```
