@@ -1,0 +1,7 @@
+<h1>Star Wars Leaderboard</h1>
+<%=link_to "Home", root_path %>
+<ol>
+  <% @star_wars.each do |star_war| %>
+    <li><%= star_war.name %>: <%= star_war.wins %></li>
+  <% end %>
+</ol>

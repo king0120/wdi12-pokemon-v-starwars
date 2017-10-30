@@ -1,0 +1,30 @@
+// Place all the styles related to the Fights controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.align-center {
+  text-align: center;
+}
+
+.links a {
+  margin: 10px;
+  font-weight: bold;
+  font-size: .85rem;
+}
+
+.fight-container{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  .star-wars, .pokemon{
+    img {
+      height: 300px;
+      width: 300px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  }
+}

@@ -1,0 +1,7 @@
+<h1>Pokemon Leaderboard</h1>
+<%=link_to "Home", root_path %>
+<ol>
+  <% @pokemon.each do |poke| %>
+    <li><%= poke.name %>: <%= poke.wins %></li>
+  <% end %>
+</ol>

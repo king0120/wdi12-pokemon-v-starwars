@@ -1,0 +1,21 @@
+<h1 class="align-center">Who Would Win?</h1>
+
+<div class="links align-center">
+  <%=link_to "Pokemon Leaderboard", pokemons_path %>
+  <%=link_to "Star Wars Leaderboard", star_wars_path %>
+</div>
+
+
+<div class="fight-container">
+  <div class="star-wars">
+    <%= image_tag @star_war.image %>
+    <h3><%= @star_war.name %></h3>
+    <%= button_to @star_war.name, update_starwar_url(@star_war), :method => :patch %>
+  </div>
+
+  <div class="pokemon">
+    <%= image_tag @pokemon.image %>
+    <h3><%= @pokemon.name %></h3>
+    <%= button_to @pokemon.name, update_pokemon_url(@pokemon), :method => :patch %>
+  </div>
+</div>
